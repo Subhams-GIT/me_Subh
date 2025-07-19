@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <h1 className="text-xl">Subham Kumar Das</h1>
       <p className="text-md  my-5">
-        I'am a Computer Engineering student studying at silicon University. With
-        a keen interest in Web3 , space science and quantum physiscs (tho I don't have any knowledge) , I am always
+        I am a Computer Engineering student studying at silicon University. With
+        a keen interest in Web3 , space science and quantum physiscs (tho I `don&apos;t` have any knowledge) , I am always
         looking forward to explore every possibilities within this world.
       </p>
       <p className="text-md  my-5">

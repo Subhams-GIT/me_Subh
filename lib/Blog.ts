@@ -5,8 +5,8 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import fs from 'fs'
 
 type blog = {
-	slug: string,
-	title: string,
+	slug: String,
+	title: String,
 	description: String,
 	content: React.ReactNode
 }
