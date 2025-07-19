@@ -1,0 +1,63 @@
+---
+title: "C Storage Classes"
+description: "Learn about the different storage classes in the C programming language including auto, extern, static, and register."
+date: "2025-07-19"
+slug: "c"
+---
+
+# C Storage Classes in C
+
+In the C programming language, **storage classes** define the **scope (visibility)**, **lifetime (duration in memory)**, and **linkage (access across files)** of variables and functions.
+
+There are **four** types of storage classes in C:
+
+- `auto`
+- `register`
+- `static`
+- `extern`
+
+Let’s dive into each one in detail.
+
+---
+
+## 🔹 `auto` Storage Class
+
+- It is the **default** storage class for variables declared inside a block (function or loop).
+- Variables declared with `auto` are stored in **memory (stack)**.
+- **Lifetime**: Limited to the block.
+- **Scope**: Local to the block.
+- **Linkage**: None.
+
+### 🔸 Example
+
+```c
+#include <stdio.h>
+
+void demo() {
+    auto int x = 5;  // same as just `int x = 5;`
+    printf("%d\n", x);
+}
+
+
+void count() {
+    register int i;
+    for (i = 0; i < 5; i++) {
+        printf("%d ", i);
+    }
+}
+
+void demo() {
+    static int counter = 0;
+    counter++;
+    printf("Counter: %d\n", counter);
+}
+
+file1.C
+int count = 100;
+
+fil2.C
+extern int count;
+
+void show() {
+    printf("Count is %d\n", count);
+}
