@@ -14,7 +14,7 @@ const page = async ({params}:PageProps) => {
   const post = await getPosts(resolvedParams.slug)
   console.log(resolvedParams);
   console.log(post);
-  return <div>
+  return <div className="w-full h-full flex justify-center items-center ">
     
     <article className="prose prose-neutral max-w-none prose-pre:p-0 mb-8">
       <h1 className="text-2xl font-semibold underline mb-2">{post?.title}</h1>

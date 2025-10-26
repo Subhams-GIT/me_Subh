@@ -2,28 +2,15 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <h1 className="text-xl">About</h1>
+    <div className="pt-16">
+      <div className=" inline-block text-3xl border-b-2 border-blue-500 ">About</div>
       <p>
-        I am a pre-final year Computer Engineering student at Silicon University
+        I am a final year Computer Engineering student at Silicon University
         aiming to become a Full-Stack Developer while having a keen interest in
         space science and how things work , understanding laws of Nature.
       </p>
       <br />
-      <div className="my-4 py-2">
-        <h2 className="text-xl">Experience</h2>
-        <b>Web Dev Lead in GDGOC-SU</b>
-        <br />
-        <p>Aug 2024 - May 2025 </p>
-        <br />
-        <ol>
-          <li>
-            Conducted a workshop on building a basic version of Paytm, guiding
-            participants through payment gateway creation , UI design, and
-            essential backend processes.
-          </li>
-        </ol>
-      </div>
+     
       <div className="my-4 py-2">
         <b>GSSOC Contributor</b>
         <br />
@@ -36,6 +23,7 @@ const page = () => {
           </li>
         </ol>
       </div>
+
     </div>
   );
 };
