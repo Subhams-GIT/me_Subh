@@ -41,15 +41,12 @@ const projects: Project[] = [
 
 const ProjectsPage = () => { 
   return (
-    <div className="mx-auto max-w-4xl p-4 sm:p-6 md:p-8 text-neutral-900">
-      <h2 className="text-3xl font-bold mb-6 border-b border-gray-700 pb-2 mt-7">
-        My Projects
-      </h2>
+    <div className="mx-auto max-w-4xl sm:p-6 md:p-8 text-neutral-900 overflow-hidden">
 
       {projects.map((project) => ( 
         <div 
           key={project.url} 
-          className="flex flex-col md:flex-row items-start gap-6 mb-8 p-4 rounded-md shadow-md  bg-white transition hover:border-gray-600 overflow-hidden"
+          className="flex flex-col md:flex-row items-start gap-6 mb-8 p-4 rounded-md  bg-white transition hover:border-gray-600 overflow-hidden"
         >
           {/* 1. Thumbnail/Image Section */}
           <section className="md:w-1/3 flex-shrink-0 w-full rounded-md text-black">
