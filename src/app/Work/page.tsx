@@ -41,7 +41,7 @@ const projects: Project[] = [
 
 const ProjectsPage = () => { 
   return (
-    <div className="mx-auto max-w-4xl sm:p-6 md:p-8 text-neutral-900 overflow-hidden">
+    <div className="mx-auto h-full max-w-4xl sm:p-6 md:p-8 text-neutral-900 ">
 
       {projects.map((project) => ( 
         <div 
@@ -51,7 +51,7 @@ const ProjectsPage = () => {
           {/* 1. Thumbnail/Image Section */}
           <section className="md:w-1/3 flex-shrink-0 w-full rounded-md text-black">
             {project.thumbnail ? (
-              <img 
+              <img
                 src={project.thumbnail} 
                 alt={`${project.name} project thumbnail`} 
                 className="w-full h-40 object-cover rounded-md shadow-lg"

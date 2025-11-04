@@ -36,7 +36,7 @@ export default function Home() {
   const latestPost = allposts.slice(0, 1);
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 flex flex-col items-center gap-10 max-w-4xl mx-auto">
+    <div className="h-full p-4 sm:p-8 flex flex-col items-center gap-10 max-w-4xl mx-auto">
       {/* Hero Section: Grid/Flex with dark background */}
       <header className="w-full bg-white text-black rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <section className="flex flex-col text-center md:text-left">
@@ -99,7 +99,7 @@ export default function Home() {
               className="block p-4 border border-gray-200 hover:border-blue-300 rounded-lg shadow-md hover:shadow-lg transition duration-300 bg-white"
             >
               <h3 className="text-xl font-bold mb-1 text-black hover:text-blue-600 transition duration-150">
-                <Link href={`/blog/${post.slug}`} className="hover:underline">
+                <Link href={`/Blog/${post.slug}`} className="hover:underline">
                   {post.title}
                 </Link>
               </h3>

@@ -5,7 +5,7 @@ import {getAllPosts} from "../../../lib/Blog";
 const page = async () => {
   const alldata = getAllPosts();
   return <div className="h-full w-full">
-	<h1 className="text-2xl text-center mt-16  border-b-2 border-blue-500">Blog</h1>
+
 	{alldata.map(post=>
 		<article key={post.slug} className="space-y-2 m-4 border shadow-sm rounded-md px-2 py-3">
             <h2 className="text-md hover:text-gray-600">

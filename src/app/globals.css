@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    color: #000;
-    background-color: #fff;
-}
 
 .btn {
     display: flex;
@@ -17,7 +13,12 @@ body {
     border-radius: 15px;
     padding: 2px;
 }
-[data-theme="dark"] body {
-    background-color: #000;
-    color: #fff;
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
