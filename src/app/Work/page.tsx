@@ -35,7 +35,7 @@ const projects: Project[] = [
     name: "Musi",
     description: "Music streaming platform where people can stream and vote for a music.",
     techUsed: ["NextJs", "Prisma", "Docker", "Turborepo", "Redis"],
-    status: "Ongoing",
+    status: "Completed",
   },
 ];
 
@@ -46,21 +46,17 @@ const ProjectsPage = () => {
       {projects.map((project) => ( 
         <div 
           key={project.url} 
-          className="flex flex-col md:flex-row items-start gap-6 mb-8 p-4 rounded-md  bg-white transition hover:border-gray-600 overflow-hidden"
+          className="flex flex-col items-start gap-6 mb-8 p-4 rounded-md  bg-white transition shadow-md hover:border-gray-600 overflow-hidden"
         >
-          {/* 1. Thumbnail/Image Section */}
-          <section className="md:w-1/3 flex-shrink-0 w-full rounded-md text-black">
+          <section className="flex-shrink-0 w-full rounded-md text-black">
             {project.thumbnail ? (
               <img
                 src={project.thumbnail} 
                 alt={`${project.name} project thumbnail`} 
-                className="w-full h-40 object-cover rounded-md shadow-lg"
+                className="w-full h-fit object-cover rounded-md shadow-lg"
               />
             ) : (
-              // Placeholder for projects without a thumbnail
-              <div className="w-full h-40 bg-gray-700 flex items-center justify-center rounded-md ">
-                No Image
-              </div>
+            <></>
             )}
           </section>
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/Components/Header";
-
+import { Cat } from "./cat";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -42,7 +42,9 @@ export default function RootLayout({
       >
         <div className="w-full max-w-xl h-[90%] shadow-md rounded-2xl bg-white text-neutral-800 p-4 overflow-y-auto scrollbar-hide">
           <Header />
+          {/* <Cat/> */}
           <main className="prose prose-neutral max-w-none mt-3">{children}</main>
+         
         </div>
       </body>
     </html>
