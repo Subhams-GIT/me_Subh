@@ -1,7 +1,7 @@
 "use client";
 
 import { Pause, CheckCircle } from "lucide-react";
-
+import Image from "next/image";
 interface Project {
   url: string;
   thumbnail: string;
@@ -41,31 +41,26 @@ const projects: Project[] = [
 
 const ProjectsPage = () => { 
   return (
-    <div className="mx-auto h-full max-w-4xl sm:p-6 md:p-8 text-neutral-900 ">
+    <div className=" h-full max-w-4xl sm:p-6 md:p-8 text-neutral-900 ">
 
       {projects.map((project) => ( 
         <div 
           key={project.url} 
-          className="flex flex-col items-start gap-6 mb-8 p-4 rounded-md  bg-white transition shadow-md hover:border-gray-600 overflow-hidden"
+          className="flex flex-col items-start gap-6 mb-8 p-4 rounded-md ring-1 ring-black/10 shadow-sm overflow-hidden"
         >
           <section className="flex-shrink-0 w-full rounded-md text-black">
             {project.thumbnail ? (
-              <img
-                src={project.thumbnail} 
-                alt={`${project.name} project thumbnail`} 
-                className="w-full h-fit object-cover rounded-md shadow-lg"
-              />
+              <Image src={project.thumbnail} height={500} width={1000} alt={project.name}/>
             ) : (
             <></>
             )}
           </section>
 
           {/* 2. Content Section */}
-          <section className="flex flex-col justify-start items-start md:w-2/3">
-            <div className="flex justify-between items-center w-full mb-2">
+          <section className="flex flex-col justify-start">
+            <div className=" flex justify-between items-center w-full mb-2">
               <span className="text-xl font-bold ">{project.name}</span>
               
-              {/* Status Indicator (using a separate div/span for ping effect) */}
               <div className="flex items-center space-x-2 text-sm font-medium">
                 {project.status === "Completed" ? (
                   <>
@@ -90,7 +85,7 @@ const ProjectsPage = () => {
               {project.techUsed.map((t) => (
                 <span 
                   key={t}
-                  className="bg-gray-700 text-gray-200 text-xs font-medium px-3 py-1 rounded-full border border-gray-600 shadow-inner"
+                  className="bg-black text-gray-200 text-xs font-medium px-3 py-1 rounded-xl border border-gray-600 shadow-inner"
                 >
                   {t}
                 </span>
